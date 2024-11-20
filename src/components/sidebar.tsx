@@ -50,7 +50,7 @@ export default function Sidebar({}: Props) {
             alt="Vercel Logo"
             width={100}
             height={100}
-            className=" h-[15px] sm:h-[35px] sm:w-[35px]"
+            className=" h-[15px] w-[15px] sm:h-[35px] sm:w-[35px]"
           />
           <p className=" text-[12px] sm:text-[20px] font-[500]">Dashboard</p>
         </Button>

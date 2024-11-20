@@ -8,7 +8,7 @@ type Props = {};
 export default function Navbar({}: Props) {
   const pathname = usePathname();
   return (
-    <div className=" h-[70px] sm:h-[99px] flex justify-between items-center px-5 sm:px-10 w-full bg-white">
+    <div className=" h-[70px] sm:h-[99px] flex justify-between items-center px-10 sm:px-10 w-full bg-white">
       <h1 className=" text-[20px] sm:text-[45px]">
         {pathname === "/" ? "Dashboard" : "Edit Application"}
       </h1>
