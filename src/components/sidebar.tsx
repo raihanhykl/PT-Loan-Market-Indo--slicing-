@@ -2,19 +2,10 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { Button } from "./ui/button";
-import {
-  AlignJustify,
-  ArrowLeft,
-  ArrowRight,
-  ChevronDown,
-  ChevronUp,
-  StickyNote,
-} from "lucide-react";
+import { ArrowLeft, ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 
-type Props = {};
-
-export default function Sidebar({}: Props) {
+export default function Sidebar() {
   const [open, setOpen] = useState(false);
   const [openEdit, setOpenEdit] = useState(false);
   const router = useRouter();
@@ -135,7 +126,7 @@ export default function Sidebar({}: Props) {
             height={15}
             className=" h-[15px] sm:h-[35px] sm:w-[35px]"
           />
-          <p className=" text-[12px] sm:text-[20px] font-[500]">FAQ's</p>
+          <p className=" text-[12px] sm:text-[20px] font-[500]">FAQ&apos;s</p>
         </Button>
         <Button
           variant={"secondary"}

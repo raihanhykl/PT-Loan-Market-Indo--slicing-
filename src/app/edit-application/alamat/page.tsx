@@ -11,9 +11,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import ProgressStepper from "../components/progress";
 import { useRouter } from "next/navigation";
 
-type Props = {};
-
-export default function Page({}: Props) {
+export default function Page() {
   const router = useRouter();
   const form = useForm<z.infer<typeof addressFormSchema>>({
     resolver: zodResolver(addressFormSchema),

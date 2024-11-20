@@ -3,9 +3,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-type Props = {};
-
-export default function Navbar({}: Props) {
+export default function Navbar() {
   const pathname = usePathname();
   return (
     <div className=" h-[70px] sm:h-[99px] flex justify-between items-center px-10 sm:px-10 w-full bg-white">

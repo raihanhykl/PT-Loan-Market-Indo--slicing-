@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // "use client";
 
 // import * as React from "react";
@@ -179,15 +181,10 @@
 "use client";
 
 import * as React from "react";
-import { Label, Pie, PieChart, Cell, Sector } from "recharts";
+import { Pie, PieChart, Cell, Sector } from "recharts";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  ChartConfig,
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/components/ui/chart";
+import { ChartConfig, ChartContainer } from "@/components/ui/chart";
 import { useMediaQuery } from "react-responsive";
 
 const RADIAN = Math.PI / 180;
@@ -239,7 +236,6 @@ const renderActiveShape = (props: any) => {
     endAngle,
     fill,
     payload,
-    percent,
     value,
   } = props;
   const sin = Math.sin(-RADIAN * midAngle);
@@ -318,7 +314,7 @@ export default function ChartComponent() {
   const [activeIndex, setActiveIndex] = React.useState(0);
 
   const onPieEnter = React.useCallback(
-    (_, index) => {
+    (_: any, index: any) => {
       setActiveIndex(index);
     },
     [setActiveIndex]
